@@ -3,199 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umar Sajid | Game Dev & Creative Portfolio</title>
+    <title>Umar Sajid | Game Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg: #fdfcf0; /* Warm paper-white */
-            --accent-blue: #3b82f6;
-            --accent-green: #10b981;
-            --accent-purple: #8b5cf6;
-            --text: #1a1a1a;
-            --border: #000000;
+            --sky-blue: #f0f7ff;
+            --accent: #007aff;
+            --glass: rgba(255, 255, 255, 0.7);
+            --text-main: #1d1d1f;
+            --text-sub: #86868b;
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            color: var(--text-main);
             margin: 0;
-            line-height: 1.5;
+            padding: 0;
+            scroll-behavior: smooth;
         }
 
-        /* Artistic Header */
+        /* Modern Glass Nav */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 40px;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--accent); }
+
+        /* Hero Section */
         header {
-            padding: 80px 10%;
-            background: #fff;
-            border-bottom: 4px solid var(--border);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding-top: 60px;
         }
 
-        .hero-name { font-size: 4rem; font-weight: 900; margin: 0; text-transform: uppercase; letter-spacing: -2px; }
-        .hero-title { font-size: 1.5rem; font-weight: 600; color: var(--accent-blue); margin-bottom: 20px; }
-        
-        .contact-pill {
-            display: inline-block;
-            padding: 8px 20px;
-            border: 3px solid var(--border);
-            font-weight: bold;
-            background: #fff;
-            box-shadow: 4px 4px 0px var(--border);
-            margin: 5px;
-            text-decoration: none;
-            color: var(--text);
-        }
+        .hero-name { font-size: 5rem; font-weight: 800; margin: 0; letter-spacing: -2px; }
+        .hero-tagline { font-size: 1.5rem; color: var(--text-sub); margin-top: 10px; }
 
-        .container { padding: 60px 10%; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 100px 20px; }
 
-        /* Section Styling */
-        h2 { 
-            font-size: 2.5rem; 
-            text-transform: uppercase; 
-            margin-bottom: 40px;
-            display: inline-block;
-            background: yellow; /* Highlight effect */
-            padding: 0 15px;
-            border: 3px solid var(--border);
-        }
+        /* Categorized Sections */
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; text-align: center; }
 
-        .project-grid {
+        .section-box { margin-bottom: 120px; }
+
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
         }
 
-        /* Artistic Cards */
+        /* Sleek Cards */
         .card {
-            background: #fff;
-            border: 4px solid var(--border);
-            padding: 25px;
-            border-radius: 0px; /* Sharp, modern look */
-            box-shadow: 8px 8px 0px var(--border);
-            transition: all 0.2s ease;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            border-radius: 30px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 12px 12px 0px var(--accent-blue);
+            transform: translateY(-10px);
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0, 122, 255, 0.1);
         }
 
-        .card.mobile { border-color: var(--accent-green); }
-        .card.pc { border-color: var(--accent-blue); }
-        .card.vr { border-color: var(--accent-purple); }
-
-        .tag {
-            font-weight: 800;
-            font-size: 0.75rem;
+        .badge {
+            font-size: 0.7rem;
             text-transform: uppercase;
-            padding: 4px 10px;
-            border: 2px solid var(--border);
-            margin-right: 5px;
-            display: inline-block;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1px;
             margin-bottom: 15px;
+            display: block;
         }
 
-        .card h3 { margin-top: 0; font-size: 1.5rem; }
+        .card h3 { font-size: 1.8rem; margin: 10px 0; }
+        .card p { color: var(--text-sub); line-height: 1.6; }
 
-        .link-btn {
+        .btn-link {
             display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
-            color: var(--text);
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: var(--accent);
+            color: white;
             text-decoration: none;
-            border-bottom: 3px solid var(--accent-blue);
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
         }
+
+        .btn-link:hover { opacity: 0.8; }
 
         footer {
-            background: var(--border);
-            color: #fff;
-            padding: 40px 10%;
+            padding: 60px;
             text-align: center;
+            background: rgba(255,255,255,0.4);
+            border-top: 1px solid rgba(255,255,255,0.3);
+            color: var(--text-sub);
         }
 
         @media (max-width: 768px) {
-            .hero-name { font-size: 2.5rem; }
+            .hero-name { font-size: 3rem; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1 class="hero-name">M. Umar Sajid</h1>
-        <p class="hero-title">Game Developer & Visual Artist</p>
+    <nav>
+        <div class="logo">MUHAMMAD UMAR SAJID</div>
         <div>
-            <a href="mailto:sheikhumar0077@gmail.com" class="contact-pill"><i class="fas fa-envelope"></i> Email Me</a>
-            <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" target="_blank" class="contact-pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" target="_blank" style="color:var(--text-main);"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
+    </nav>
+
+    <header>
+        <h1 class="hero-name">Umar Sajid.</h1>
+        <p class="hero-tagline">Game Developer • Designer • Creative Technologist</p>
+        <p style="color:var(--accent); font-weight: 600;">B.S. Computer Games Development </p>
     </header>
 
     <div class="container">
         
-        <h2>Mobile Games</h2>
-        <div class="project-grid">
-            <div class="card mobile">
-                <span class="tag">Google Play</span>
-                <h3>Mob Strike: Stickman Running</h3>
-                <p>Developed with Unity (C#) from prototype to release. Featured gameplay mechanics and ad mediation[cite: 9, 36].</p>
-                <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" class="link-btn" target="_blank">View on Store →</a>
-            </div>
+        <section class="section-box">
+            <h2>Mobile Experiences</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Google Play Store [cite: 36]</span>
+                    <h3>Mob Strike</h3>
+                    <p>Hyper-casual runner built with Unity (C#). Performance optimized for low-end Android devices[cite: 9, 36].</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" class="btn-link" target="_blank">View App</a>
+                </div>
 
-            <div class="card mobile">
-                <span class="tag">Unity</span>
-                <h3>Spiky Tap: Jump to Survive</h3>
-                <p>A fast-paced Android survival game focusing on performance optimization[cite: 42].</p>
-                <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" class="link-btn" target="_blank">View on Store →</a>
-            </div>
+                <div class="card">
+                    <span class="badge">Google Play Store [cite: 42]</span>
+                    <h3>Spiky Tap</h3>
+                    <p>Fast-paced survival game with seamless gameplay mechanics and ad integration[cite: 42].</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" class="btn-link" target="_blank">View App</a>
+                </div>
 
-            <div class="card mobile">
-                <span class="tag">Prototype</span>
-                <h3>Beach Ball Game</h3>
-                <p>Physics-based gameplay prototype developed during Mind Storm Studios apprenticeship[cite: 43, 44, 45].</p>
-                <a href="https://youtu.be/VW96puNj20k" class="link-btn" target="_blank">Watch Video →</a>
+                <div class="card">
+                    <span class="badge">Unity Prototype [cite: 44]</span>
+                    <h3>Beach Ball Game</h3>
+                    <p>Built during Mind Storm Studios apprenticeship. Focused on physics-driven interactions[cite: 13, 44].</p>
+                    <a href="https://youtu.be/VW96puNj20k" class="btn-link" target="_blank">Watch Video</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <h2>PC Games</h2>
-        <div class="project-grid">
-            <div class="card pc">
-                <span class="tag">Award Winner</span>
-                <h3>Unfold</h3>
-                <p>Runner-Up at Pakistan Game Developers Conference (PGDC). Built with Unity[cite: 38, 39, 40].</p>
-                <a href="https://youtu.be/DVMAJuueO-w" class="link-btn" target="_blank">Watch Project →</a>
-            </div>
+        <section class="section-box">
+            <h2>PC Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Award Winner [cite: 39]</span>
+                    <h3>Unfold</h3>
+                    <p>Runner-Up at PGDC[cite: 39]. A high-fidelity PC game experience developed in Unity[cite: 38].</p>
+                    <a href="https://youtu.be/DVMAJuueO-w" class="btn-link" target="_blank">Watch Trailer</a>
+                </div>
 
-            <div class="card pc">
-                <span class="tag">UE5</span>
-                <h3>Snowboard Dash 3D</h3>
-                <p>Fast-paced 3D sports game developed using Unreal Engine 5[cite: 52, 53].</p>
-                <a href="https://youtu.be/h3e0fmhYWQY" class="link-btn" target="_blank">View Demo →</a>
+                <div class="card">
+                    <span class="badge">Unreal Engine 5 [cite: 52]</span>
+                    <h3>Snowboard Dash</h3>
+                    <p>Action-sports gameplay developed on the industry-leading UE5 engine[cite: 52].</p>
+                    <a href="https://youtu.be/h3e0fmhYWQY" class="btn-link" target="_blank">Watch Demo</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <h2>VR Experiences</h2>
-        <div class="project-grid">
-            <div class="card vr">
-                <span class="tag">Oculus</span>
-                <h3>Smash Hit in VR</h3>
-                <p>Virtual Reality experience built for Oculus focusing on immersive physics[cite: 47, 48].</p>
-                <a href="https://www.youtube.com/watch?v=KKteJMyiZwU" class="link-btn" target="_blank">Watch Gameplay →</a>
-            </div>
+        <section class="section-box">
+            <h2>Virtual Reality</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge">Oculus / VR [cite: 47]</span>
+                    <h3>Smash Hit VR</h3>
+                    <p>Immersive Virtual Reality adaptation focusing on 3D spatial design and mechanics[cite: 47].</p>
+                    <a href="https://www.youtube.com/watch?v=KKteJMyiZwU" class="btn-link" target="_blank">Watch Gameplay</a>
+                </div>
 
-            <div class="card vr">
-                <span class="tag">Meta VR</span>
-                <h3>VR Shooting & Box Smash</h3>
-                <p>Experimental VR mechanics featuring shooting and environmental destruction[cite: 50].</p>
-                <a href="https://youtube.com/shorts/fo7lv6VY7h4" class="link-btn" target="_blank">View Short →</a>
+                <div class="card">
+                    <span class="badge">Oculus / VR [cite: 50]</span>
+                    <h3>Shooting Box Smash</h3>
+                    <p>An experimental VR project exploring destruction physics and controller input[cite: 50].</p>
+                    <a href="https://youtube.com/shorts/fo7lv6VY7h4" class="btn-link" target="_blank">Watch Short</a>
+                </div>
             </div>
-        </div>
+        </section>
 
     </div>
 
     <footer>
-        <p><strong>Muhammad Umar Sajid</strong> | B.S. Computer Games Development [cite: 1, 56]</p>
-        <p>Location: Rawalpindi, Pakistan [cite: 4]</p>
+        <p><strong>Muhammad Umar Sajid</strong> [cite: 1]</p>
+        <p>Email: sheikhumar0077@gmail.com [cite: 2]</p>
+        <p>Rawalpindi, Pakistan [cite: 4]</p>
     </footer>
 
 </body>
