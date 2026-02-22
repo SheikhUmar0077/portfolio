@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Umar Sajid | Game Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Muhammad Umar Sajid | Game Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         :root {
-            --sky-light: #e0f2fe;
-            --sky-deep: #7dd3fc;
-            --accent: #0369a1;
-            --text-dark: #0f172a;
+            --sky-top: #e0f2fe;
+            --sky-bottom: #bae6fd;
+            --accent: #0284c7;
             --glass: rgba(255, 255, 255, 0.4);
+            --text-dark: #0f172a;
         }
 
         * {
@@ -22,14 +23,14 @@
         }
 
         body {
-            background: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-deep) 100%);
-            background-attachment: fixed;
+            background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
             color: var(--text-dark);
-            line-height: 1.6;
+            min-height: 100vh;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Animated Sky Background */
+        /* Sky Animation Background */
         .sky-container {
             position: fixed;
             top: 0;
@@ -44,21 +45,38 @@
             position: absolute;
             background: white;
             border-radius: 100px;
+            filter: blur(50px);
             opacity: 0.6;
-            filter: blur(20px);
-            animation: drift linear infinite;
+            animation: float infinite linear;
         }
 
-        @keyframes drift {
+        @keyframes float {
             from { transform: translateX(-200px); }
-            to { transform: translateX(calc(100vw + 200px)); }
+            to { transform: translateX(110vw); }
+        }
+
+        /* Glassmorphism Sections */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
         }
 
         /* Layout */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 2rem;
         }
 
         header {
@@ -70,152 +88,231 @@
             text-align: center;
         }
 
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #0369a1, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
             margin-bottom: 4rem;
         }
 
-        /* Typography */
-        h1 { font-size: 4rem; font-weight: 700; letter-spacing: -2px; margin-bottom: 0.5rem; }
-        .subtitle { font-size: 1.5rem; color: var(--accent); font-weight: 400; margin-bottom: 2rem; }
-        h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
-
-        /* Sections */
-        section { padding: 80px 0; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            background: var(--glass);
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
         }
 
-        .project-card, .exp-card {
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover { transform: translateY(-10px); }
-
-        .tag {
-            display: inline-block;
+        nav a:hover {
             background: var(--accent);
             color: white;
-            padding: 0.2rem 0.8rem;
-            border-radius: 50px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #0369a1;
+        }
+
+        /* Experience & Projects */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
             font-size: 0.8rem;
             margin-bottom: 1rem;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 2rem;
-            width: 100%;
-            z-index: 100;
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
-        .nav-inner {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.4rem 1rem;
+            margin: 0.2rem;
             border-radius: 50px;
-            width: fit-content;
-            margin: 0 auto;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
-        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
 
-        footer { text-align: center; padding: 4rem; opacity: 0.7; }
-
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .container { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
 
     <div class="sky-container" id="sky"></div>
 
-    <nav>
-        <div class="nav-inner">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
     <header>
-        <div class="glass-card">
-            <h1>Muhammad Umar Sajid</h1>
-            <p class="subtitle">Game Developer & Creative Engineer</p>
-            <p>Crafting immersive digital worlds through code and imagination.</p>
+        <div class="glass-card" style="padding: 4rem;">
+            <p style="font-weight: 600; color: var(--accent);">B.S. COMPUTER GAMES DEVELOPMENT</p>
+            <h1 class="hero-title">Muhammad Umar Sajid</h1>
+            <p class="hero-subtitle">Digital Game Developer</p>
+            <div style="margin-top: 1rem;">
+                <a href="mailto:sheikhumar0077@gmail.com" style="margin: 0 10px; color: var(--text-dark);"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" target="_blank" style="margin: 0 10px; color: var(--text-dark);"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </header>
+
+    <nav>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+    </nav>
 
     <div class="container">
         
         <section id="experience">
             <h2>Work Experience</h2>
+            
             <div class="glass-card">
-                <div class="exp-card">
-                    <h3>Senior Game Developer</h3>
-                    <p><strong>DreamSphere Studios</strong> | 2023 - Present</p>
-                    <p>Leading the development of high-fidelity open-world environments and optimizing C# scripts for mobile performance.</p>
-                </div>
-                <hr style="opacity: 0.2; margin: 1.5rem 0;">
-                <div class="exp-card">
-                    <h3>Gameplay Programmer</h3>
-                    <p><strong>Cloud9 Interactive</strong> | 2021 - 2023</p>
-                    <p>Focused on AI pathfinding and physics-based character controllers in Unity and Unreal Engine.</p>
-                </div>
+                <span class="badge">May 2025 - Present</span>
+                <h3>Digital Game Developer</h3>
+                <p style="font-weight: 600; color: var(--accent);">GN Technologies | Islamabad</p>
+                <ul style="margin-top: 1rem; line-height: 1.6; padding-left: 1.2rem;">
+                    <li>Led Unity (C#) development of hyper-casual mobile games from prototype to release.</li>
+                    <li>Integrated ad mediation, Firebase analytics, and monetization features.</li>
+                    <li>Optimized games for low-end Android devices and production stability.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <span class="badge">Jun 2024 - Aug 2024</span>
+                <h3>Digital Game Developer (Apprentice)</h3>
+                <p style="font-weight: 600; color: var(--accent);">Mindstorm Studios | Lahore</p>
+                <ul style="margin-top: 1rem; line-height: 1.6; padding-left: 1.2rem;">
+                    <li>Completed summer apprenticeship focused on game jam style development.</li>
+                    <li>Built complete playable game prototypes using Unity.</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <span class="badge">2019 - 2022</span>
+                <h3>Graphics Designer</h3>
+                <p style="font-weight: 600; color: var(--accent);">R Technologies & Seven Koncepts</p>
+                <p style="margin-top: 0.5rem;">Designed UI/UX interfaces, promotional posts, and branding assets using Figma, Photoshop, and Illustrator.</p>
             </div>
         </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
-            <div class="grid">
-                <div class="glass-card project-card">
-                    <span class="tag">Action RPG</span>
-                    <h3>Skybound Chronicles</h3>
-                    <p>A third-person explorer featuring custom gravity physics and voxel-based terrain generation.</p>
+            <div class="item-grid">
+                
+                <div class="glass-card">
+                    <h3>Mob Strike: Stickman Running</h3>
+                    <span class="badge">Android | Unity</span>
+                    <p>Hyper-casual runner with integrated Firebase Analytics and AdMob mediation.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" class="project-link" target="_blank">Play Store →</a>
                 </div>
-                <div class="glass-card project-card">
-                    <span class="tag">Multiplayer</span>
-                    <h3>Neon Velocity</h3>
-                    <p>A fast-paced futuristic racing game using Photon Engine for real-time networking.</p>
+
+                <div class="glass-card">
+                    <h3>Unfold (FYP)</h3>
+                    <span class="badge">Award Winner</span>
+                    <p>Runner-Up at PGDC Air University Expo. A complex 3D puzzle game featuring reusable Scriptable Object systems.</p>
+                    <a href="https://youtu.be/DVMAJuueO-w" class="project-link" target="_blank">Watch Gameplay →</a>
                 </div>
-                <div class="glass-card project-card">
-                    <span class="tag">Simulation</span>
-                    <h3>Zen Garden VR</h3>
-                    <p>A peaceful VR experience focusing on hand-tracking and fluid simulation.</p>
+
+                <div class="glass-card">
+                    <h3>Snowboard Dash 3D</h3>
+                    <span class="badge">PC | Unreal Engine 5</span>
+                    <p>Physics-based movement system, landscape sculpting, and foliage systems in UE5.</p>
+                    <a href="https://youtu.be/h3e0fmhYWQY" class="project-link" target="_blank">View Project →</a>
+                </div>
+
+                <div class="glass-card">
+                    <h3>VR Smash Hit</h3>
+                    <span class="badge">VR | Oculus</span>
+                    <p>Immersive VR shooting mechanics and box smashing physics built in Unity.</p>
+                    <a href="https://www.youtube.com/watch?v=KKteJMyiZwU" class="project-link" target="_blank">Watch VR Demo →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Arsenal</h2>
+            <div class="glass-card" style="text-align: center;">
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Development</h4>
+                    <span class="skill-tag">Unity</span> <span class="skill-tag">Unreal Engine 5</span> 
+                    <span class="skill-tag">C#</span> <span class="skill-tag">C++</span> 
+                    <span class="skill-tag">VR/AR</span> <span class="skill-tag">Firebase</span> 
+                    <span class="skill-tag">AdMob</span>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">Design</h4>
+                    <span class="skill-tag">Blender</span> <span class="skill-tag">Figma</span> 
+                    <span class="skill-tag">UI/UX</span> <span class="skill-tag">Adobe Photoshop</span> 
+                    <span class="skill-tag">3D Modeling</span>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <div class="glass-card" style="text-align: center;">
-                <h2>Let's Build Something Great</h2>
-                <p>Interested in collaborating with my studio?</p>
-                <br>
-                <a href="mailto:your.email@example.com" style="background: var(--text-dark); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; display: inline-block;">Get In Touch</a>
+        <section id="honors">
+            <h2>Honors</h2>
+            <div class="glass-card">
+                <p>🏆 <strong>1st Position</strong> - Game Jam (PGDC Air University 2023)</p>
+                <p>🥈 <strong>2nd Position</strong> - High Achiever of the Batch (6th Semester)</p>
+                <p>🚀 <strong>Founder</strong> - Unstack Studios</p>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Muhammad Umar Sajid. Designed for the horizon.</p>
+        <p>&copy; 2026 Muhammad Umar Sajid. Based in Rawalpindi, Pakistan.</p>
     </footer>
 
     <script>
-        // Create random clouds for the "sky" effect
+        // Create animated clouds
         const sky = document.getElementById('sky');
         const cloudCount = 8;
 
@@ -223,31 +320,18 @@
             const cloud = document.createElement('div');
             cloud.className = 'cloud';
             
-            // Randomize size and position
-            const width = Math.random() * 200 + 100;
-            const height = width * 0.6;
-            cloud.style.width = `${width}px`;
-            cloud.style.height = `${height}px`;
-            cloud.style.top = `${Math.random() * 100}vh`;
+            const size = Math.random() * 200 + 150;
+            cloud.style.width = `${size}px`;
+            cloud.style.height = `${size * 0.6}px`;
             
-            // Randomize animation speed
-            const duration = Math.random() * 60 + 40;
-            const delay = Math.random() * -100;
-            cloud.style.animationDuration = `${duration}s`;
-            cloud.style.animationDelay = `${delay}s`;
+            cloud.style.top = `${Math.random() * 100}vh`;
+            cloud.style.left = `-${size}px`;
+            
+            cloud.style.animationDuration = `${Math.random() * 30 + 20}s`;
+            cloud.style.animationDelay = `${Math.random() * 20}s`;
             
             sky.appendChild(cloud);
         }
-
-        // Smooth scroll
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
     </script>
 </body>
 </html>
