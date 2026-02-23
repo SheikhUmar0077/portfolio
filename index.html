@@ -66,24 +66,23 @@
             border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
-        /* Tab System Styling */
-        .tab-btn.active {
-            background-color: #38bdf8;
-            color: #020617;
-        }
-
-        /* Slider Custom Styles */
+        /* Slider Styles */
         .slider-container {
             position: relative;
             overflow: hidden;
-            border-radius: 0.75rem;
+            border-radius: 1rem;
         }
-        .slider-track {
+        .slider-wrapper {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
-        .slider-item {
+        .slide {
             min-width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -95,8 +94,9 @@
             <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
                 <a href="#home" class="hover:text-sky-400 transition">Home</a>
                 <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
-                <a href="#projects" class="hover:text-sky-400 transition">Portfolio</a>
-                <a href="#achievements" class="hover:text-sky-400 transition">Awards</a>
+                <a href="#game-dev" class="hover:text-sky-400 transition">Games</a>
+                <a href="#design" class="hover:text-sky-400 transition">Design</a>
+                <a href="#modelling" class="hover:text-sky-400 transition">3D</a>
             </div>
         </div>
     </nav>
@@ -106,13 +106,13 @@
             <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/20">
                 Founder, Unstack Studios
             </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">Digital Game <span class="gradient-text">Developer</span></h1>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">Tech & <span class="gradient-text">Creative</span> Studio</h1>
             <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                Crafting immersive worlds and high-performance mobile games. Specialized in Unity, Unreal Engine 5, and UI/UX design.
+                Game Development | Graphic Design | 3D Modelling. Crafting high-performance digital experiences.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="bg-sky-500 hover:bg-sky-600 px-10 py-4 rounded-xl font-bold transition shadow-lg shadow-sky-500/20">Explore Projects</a>
-                <a href="mailto:sheikhumar0077@gmail.com" class="glass-card px-10 py-4 rounded-xl font-bold hover:border-sky-400 transition">Get In Touch</a>
+                <a href="#game-dev" class="bg-sky-500 hover:bg-sky-600 px-10 py-4 rounded-xl font-bold transition shadow-lg shadow-sky-500/20">View Portfolio</a>
+                <a href="mailto:sheikhumar0077@gmail.com" class="glass-card px-10 py-4 rounded-xl font-bold hover:border-sky-400 transition">Contact Me</a>
             </div>
         </div>
     </section>
@@ -122,212 +122,200 @@
             <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Work Experience</h2>
             <div class="space-y-8">
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
-                            <p class="text-gray-300">GN Technologies | 12/05/2025 - Present</p>
-                        </div>
-                    </div>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Led Unity (C#) development of hyper-casual mobile games from prototype to release.</li>
-                        <li>• Implemented gameplay mechanics, UI systems, and performance optimizations.</li>
-                        <li>• Integrated ad mediation, Firebase analytics, and monetization features.</li>
+                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
+                    <p class="text-gray-300">GN Technologies | 12/05/2025 - Present</p>
+                    <ul class="text-gray-400 mt-4 space-y-2 text-sm">
+                        <li>• Led Unity development of hyper-casual games from prototype to release.</li>
+                        <li>• Integrated ad mediation, Firebase, and performance optimizations.</li>
                     </ul>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Digital Game Developer Apprentice</h3>
-                            <p class="text-gray-300">Mindstorm Studios | 07/06/2024 - 12/08/2024</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm mb-2">Completed intensive summer apprenticeship focused on rapid prototyping.</p>
+                    <h3 class="text-xl font-bold text-sky-400">Game Developer Apprentice</h3>
+                    <p class="text-gray-300">Mindstorm Studios | 2024</p>
+                    <p class="text-gray-400 mt-2 text-sm">Rapid prototyping and game jam style development using Unity.</p>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
-                            <p class="text-gray-300">R Technologies | 05/05/2022 - 30/09/2022</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Designed UI/UX interfaces, promotional posts, and video editing for brand storytelling.</p>
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
+                    <p class="text-gray-300">R Technologies | 2022</p>
+                    <p class="text-gray-400 mt-2 text-sm">Designed UI/UX, promotional digital graphics, and video editing.</p>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Graphics Designer Intern</h3>
-                            <p class="text-gray-300">Seven Koncepts | 01/01/2019 - 31/03/2019</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Assisted in visual designs for digital marketing and social media branding.</p>
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer Intern</h3>
+                    <p class="text-gray-300">Seven Koncepts | 2019</p>
+                    <p class="text-gray-400 mt-2 text-sm">Social media graphics, branding assets, and typography.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6">
+    <section id="game-dev" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-12 text-center" data-aos="fade-up">Creative Portfolio</h2>
-            
-            <div class="flex flex-wrap justify-center gap-4 mb-16">
-                <button onclick="showTab('game-dev')" class="tab-btn active px-8 py-3 rounded-full border border-sky-400/30 font-bold transition-all">Game Development</button>
-                <button onclick="showTab('graphic-design')" class="tab-btn px-8 py-3 rounded-full border border-sky-400/30 font-bold transition-all">Graphic Design</button>
-                <button onclick="showTab('modelling')" class="tab-btn px-8 py-3 rounded-full border border-sky-400/30 font-bold transition-all">2D & 3D Modelling</button>
-            </div>
-
-            <div id="game-dev" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/100/0ea5e9/ffffff?text=MobStrike" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
-                    <span class="skill-badge uppercase">Playstore</span>
-                    <h3 class="text-lg font-bold mt-4 mb-2">Mob Strike</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play on Android →</a>
+            <h2 class="text-4xl font-extrabold mb-16 text-center gradient-text" data-aos="fade-up">Game Development</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-2xl">
+                    <img src="https://via.placeholder.com/100/0ea5e9/ffffff?text=MobStrike" alt="Icon" class="w-16 h-16 rounded-xl mb-4">
+                    <h3 class="text-lg font-bold mb-2">Mob Strike: Stickman Running</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" target="_blank" class="text-sky-400 text-sm font-bold">Play on Android →</a>
                 </div>
-
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass-card p-6 rounded-2xl">
                     <div class="video-wrapper mb-4">
                         <iframe src="https://www.youtube.com/embed/DVMAJuueO-w"></iframe>
                     </div>
-                    <span class="skill-badge uppercase">FYP Winner</span>
-                    <h3 class="text-lg font-bold mt-4 mb-2">Unfold (PC)</h3>
+                    <h3 class="text-lg font-bold">Unfold (PC Game - FYP)</h3>
+                    <p class="text-xs text-yellow-500 mt-2"><i class="fas fa-trophy mr-1"></i> PGDC Runner-Up</p>
                 </div>
-
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/100/f43f5e/ffffff?text=SpikyTap" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
-                    <span class="skill-badge uppercase">Playstore</span>
-                    <h3 class="text-lg font-bold mt-4 mb-2">Spiky Tap</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play on Android →</a>
-                </div>
-
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
+                <div class="glass-card p-6 rounded-2xl">
                     <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/fo7lv6VY7h4"></iframe>
+                        <iframe src="https://www.youtube.com/embed/KKteJMyiZwU"></iframe>
                     </div>
-                    <span class="skill-badge uppercase">Oculus VR</span>
-                    <h3 class="text-lg font-bold mt-4 mb-2">VR Shooting</h3>
+                    <h3 class="text-lg font-bold">Smash Hit VR (Oculus)</h3>
                 </div>
-            </div>
-
-            <div id="graphic-design" class="tab-content hidden grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-4 rounded-2xl col-span-full">
-                    <h3 class="text-xl font-bold mb-6 text-center text-sky-400">Branding & Creative Design Gallery</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="slider-container" id="slider-AC">
-                            <div class="slider-track" id="track-AC"></div>
-                            <div class="absolute inset-y-0 left-0 flex items-center"><button onclick="moveSlider('AC', -1)" class="bg-black/50 p-2 rounded-r">❮</button></div>
-                            <div class="absolute inset-y-0 right-0 flex items-center"><button onclick="moveSlider('AC', 1)" class="bg-black/50 p-2 rounded-l">❯</button></div>
-                            <p class="text-center mt-2 text-xs font-bold text-gray-500">AC COLLECTION</p>
-                        </div>
-                        <div class="slider-container" id="slider-BNB">
-                            <div class="slider-track" id="track-BNB"></div>
-                            <div class="absolute inset-y-0 left-0 flex items-center"><button onclick="moveSlider('BNB', -1)" class="bg-black/50 p-2 rounded-r">❮</button></div>
-                            <div class="absolute inset-y-0 right-0 flex items-center"><button onclick="moveSlider('BNB', 1)" class="bg-black/50 p-2 rounded-l">❯</button></div>
-                            <p class="text-center mt-2 text-xs font-bold text-gray-500">BNB BRANDING</p>
-                        </div>
-                        <div class="slider-container" id="slider-BNB_COVER">
-                            <div class="slider-track" id="track-BNB_COVER"></div>
-                            <div class="absolute inset-y-0 left-0 flex items-center"><button onclick="moveSlider('BNB_COVER', -1)" class="bg-black/50 p-2 rounded-r">❮</button></div>
-                            <div class="absolute inset-y-0 right-0 flex items-center"><button onclick="moveSlider('BNB_COVER', 1)" class="bg-black/50 p-2 rounded-l">❯</button></div>
-                            <p class="text-center mt-2 text-xs font-bold text-gray-500">SOCIAL MEDIA COVERS</p>
-                        </div>
-                        <div class="slider-container" id="slider-LIFT_DO">
-                            <div class="slider-track" id="track-LIFT_DO"></div>
-                            <div class="absolute inset-y-0 left-0 flex items-center"><button onclick="moveSlider('LIFT_DO', -1)" class="bg-black/50 p-2 rounded-r">❮</button></div>
-                            <div class="absolute inset-y-0 right-0 flex items-center"><button onclick="moveSlider('LIFT_DO', 1)" class="bg-black/50 p-2 rounded-l">❯</button></div>
-                            <p class="text-center mt-2 text-xs font-bold text-gray-500">LIFT DO GRAPHICS</p>
-                        </div>
-                    </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <img src="https://via.placeholder.com/100/f43f5e/ffffff?text=SpikyTap" alt="Icon" class="w-16 h-16 rounded-xl mb-4">
+                    <h3 class="text-lg font-bold">Spiky Tap</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" target="_blank" class="text-sky-400 text-sm font-bold">Play on Android →</a>
                 </div>
-            </div>
-
-            <div id="modelling" class="tab-content hidden">
-                <div class="glass-card p-6 rounded-2xl max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold mb-6 text-center text-sky-400">3D Assets & Modelling</h3>
-                    <div class="slider-container" id="slider-3D">
-                        <div class="slider-track" id="track-3D"></div>
-                        <div class="absolute inset-y-0 left-0 flex items-center"><button onclick="moveSlider('3D', -1)" class="bg-black/50 p-2 rounded-r text-2xl">❮</button></div>
-                        <div class="absolute inset-y-0 right-0 flex items-center"><button onclick="moveSlider('3D', 1)" class="bg-black/50 p-2 rounded-l text-2xl">❯</button></div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="video-wrapper mb-4">
+                        <iframe src="https://www.youtube.com/embed/h3e0fmhYWQY"></iframe>
                     </div>
-                    <p class="text-gray-400 text-center mt-6">A collection of custom 3D models developed for games and architectural visualization using Blender and Unreal Engine.</p>
+                    <h3 class="text-lg font-bold">Snowboard Dash (UE5)</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="py-24 px-6">
+    <section id="design" class="py-24 bg-slate-900/30 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-16 text-center gradient-text" data-aos="fade-up">Graphic Design & 2D</h2>
+            <div class="glass-card p-4 rounded-3xl relative">
+                <div class="slider-container" id="graphic-slider">
+                    <div class="slider-wrapper" id="graphic-wrapper">
+                        </div>
+                </div>
+                <button onclick="prevSlide('graphic')" class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full hover:bg-sky-500 transition"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="nextSlide('graphic')" class="absolute right-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full hover:bg-sky-500 transition"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <p class="text-center text-gray-400 mt-6 text-sm italic">Featuring works from AC, BNB, LIFT DO, and more.</p>
+        </div>
+    </section>
+
+    <section id="modelling" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-16 text-center gradient-text" data-aos="fade-up">3D Modelling</h2>
+            <div class="glass-card p-4 rounded-3xl relative">
+                <div class="slider-container" id="modelling-slider">
+                    <div class="slider-wrapper" id="modelling-wrapper">
+                        </div>
+                </div>
+                <button onclick="prevSlide('modelling')" class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full hover:bg-sky-500 transition"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="nextSlide('modelling')" class="absolute right-6 top-1/2 -translate-y-1/2 bg-black/50 p-3 rounded-full hover:bg-sky-500 transition"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-24 px-6 bg-slate-900/30">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Honours & Awards</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in">
-                    <i class="fas fa-medal text-4xl text-yellow-500"></i>
-                    <div><h4 class="font-bold">1st Position - Game Jam</h4><p class="text-gray-400 text-sm">PGDC, Air University (2023)</p></div>
+                <div class="glass-card p-6 flex items-center space-x-4">
+                    <i class="fas fa-medal text-yellow-500 text-3xl"></i>
+                    <div>
+                        <h4 class="font-bold">1st - Game Jam</h4>
+                        <p class="text-gray-400 text-xs">Air University (2023)</p>
+                    </div>
                 </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-award text-4xl text-purple-400"></i>
-                    <div><h4 class="font-bold">Runner Up - FYP</h4><p class="text-gray-400 text-sm">PGDC, Air University (2025)</p></div>
+                <div class="glass-card p-6 flex items-center space-x-4">
+                    <i class="fas fa-award text-purple-400 text-3xl"></i>
+                    <div>
+                        <h4 class="font-bold">Runner Up - FYP</h4>
+                        <p class="text-gray-400 text-xs">PGDC (2025)</p>
+                    </div>
                 </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-trophy text-4xl text-sky-400"></i>
-                    <div><h4 class="font-bold">High Achiever</h4><p class="text-gray-400 text-sm">2nd Position in Batch</p></div>
+                <div class="glass-card p-6 flex items-center space-x-4">
+                    <i class="fas fa-trophy text-sky-400 text-3xl"></i>
+                    <div>
+                        <h4 class="font-bold">2nd - Batch Ranking</h4>
+                        <p class="text-gray-400 text-xs">6th Semester Achiever</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="mb-8 flex justify-center space-x-6 text-2xl">
-            <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" class="hover:text-sky-400 transition" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:sheikhumar0077@gmail.com" class="hover:text-sky-400 transition"><i class="fas fa-envelope"></i></a>
+    <footer class="py-20 text-center border-t border-white/5">
+        <div class="flex justify-center space-x-6 text-2xl mb-6">
+            <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" class="hover:text-sky-400"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sheikhumar0077@gmail.com" class="hover:text-sky-400"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-gray-500 text-xs tracking-widest uppercase mb-2">Muhammad Umar Sajid</p>
-        <p class="text-gray-600 text-[10px]">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
+        <p class="text-gray-500 text-xs uppercase tracking-widest">Muhammad Umar Sajid</p>
+        <p class="text-gray-600 text-[10px] mt-2">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // TAB SYSTEM
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabId).classList.remove('hidden');
-            event.currentTarget.classList.add('active');
-        }
-
-        // SLIDER CONFIGURATION
-        // Change the 'count' values below to match exactly how many images you have in each folder
-        const folderConfigs = {
-            '3D': { path: '3D/', count: 5 },
-            'AC': { path: 'AC/', count: 4 },
-            'BNB': { path: 'BNB/', count: 4 },
-            'BNB_COVER': { path: 'BNB COVER/', count: 3 },
-            'LIFT_DO': { path: 'LIFT DO/', count: 4 }
+        // Configuration for Sliders
+        // Update these counts based on how many images you have in each folder
+        const config = {
+            graphic: {
+                folders: ['AC', 'BNB COVER', 'BNB', 'LIFT DO'],
+                imagesPerFolder: [4, 4, 4, 4], // Adjust numbers (e.g., AC has 4 images, BNB has 4)
+                wrapperId: 'graphic-wrapper',
+                index: 0,
+                total: 0
+            },
+            modelling: {
+                folders: ['3D'],
+                imagesPerFolder: [10], // Adjust based on how many images in your 3D folder
+                wrapperId: 'modelling-wrapper',
+                index: 0,
+                total: 0
+            }
         };
 
-        const currentIndices = {};
-
         function initSliders() {
-            for (const [key, config] of Object.entries(folderConfigs)) {
-                const track = document.getElementById(`track-${key.replace(' ', '_')}`);
-                currentIndices[key.replace(' ', '_')] = 0;
-                
-                for (let i = 1; i <= config.count; i++) {
-                    const item = document.createElement('div');
-                    item.className = 'slider-item';
-                    item.innerHTML = `<img src="${config.path}${i}.png" class="w-full h-auto object-cover rounded-lg" onerror="this.src='https://via.placeholder.com/600x400/1e293b/ffffff?text=Image+${i}'">`;
-                    track.appendChild(item);
+            // Setup Graphics Slider (Collective)
+            const gWrapper = document.getElementById(config.graphic.wrapperId);
+            config.graphic.folders.forEach((folder, folderIdx) => {
+                for(let i = 1; i <= config.graphic.imagesPerFolder[folderIdx]; i++) {
+                    const slide = document.createElement('div');
+                    slide.className = 'slide';
+                    slide.innerHTML = `<img src="graphic/${folder}/${i}.png" onerror="this.src='https://via.placeholder.com/800x400?text=Graphic+Image+Coming+Soon'" alt="Graphic">`;
+                    gWrapper.appendChild(slide);
+                    config.graphic.total++;
                 }
+            });
+
+            // Setup 3D Slider
+            const mWrapper = document.getElementById(config.modelling.wrapperId);
+            for(let i = 1; i <= config.modelling.imagesPerFolder[0]; i++) {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.innerHTML = `<img src="3D/${i}.png" onerror="this.src='https://via.placeholder.com/800x400?text=3D+Model+Coming+Soon'" alt="3D">`;
+                mWrapper.appendChild(slide);
+                config.modelling.total++;
             }
         }
 
-        function moveSlider(id, direction) {
-            const track = document.getElementById(`track-${id}`);
-            const count = folderConfigs[id.replace('_', ' ')].count;
-            currentIndices[id] = (currentIndices[id] + direction + count) % count;
-            track.style.transform = `translateX(-${currentIndices[id] * 100}%)`;
+        function updateSlider(type) {
+            const slider = config[type];
+            const wrapper = document.getElementById(slider.wrapperId);
+            wrapper.style.transform = `translateX(-${slider.index * 100}%)`;
+        }
+
+        function nextSlide(type) {
+            config[type].index = (config[type].index + 1) % config[type].total;
+            updateSlider(type);
+        }
+
+        function prevSlide(type) {
+            config[type].index = (config[type].index - 1 + config[type].total) % config[type].total;
+            updateSlider(type);
         }
 
         window.onload = initSliders;
