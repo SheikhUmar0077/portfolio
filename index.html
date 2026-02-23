@@ -31,12 +31,6 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .glass-card:hover {
-            border-color: #38bdf8;
-            transform: translateY(-8px);
-            background: rgba(30, 41, 59, 0.6);
-        }
-
         .gradient-text {
             background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
             -webkit-background-clip: text;
@@ -67,26 +61,33 @@
             border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
-        /* Tab Styling */
-        .tab-btn.active {
-            background-color: #38bdf8;
-            color: white;
-        }
-
-        /* 3D Slider Styles */
         .swiper {
             width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-bottom: 50px !important;
         }
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
+
+        .swiper-slide img {
+            width: 100%;
             height: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 2px solid rgba(56, 189, 248, 0.3);
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: #38bdf8;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -97,9 +98,10 @@
             <span class="text-xl font-extrabold tracking-tighter gradient-text">UMAR SAJID</span>
             <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
                 <a href="#home" class="hover:text-sky-400 transition">Home</a>
-                <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
-                <a href="#portfolio" class="hover:text-sky-400 transition">Portfolio</a>
-                <a href="#achievements" class="hover:text-sky-400 transition">Awards</a>
+                <a href="#game-dev" class="hover:text-sky-400 transition">Games</a>
+                <a href="#modelling" class="hover:text-sky-400 transition">3D Art</a>
+                <a href="#graphics" class="hover:text-sky-400 transition">Design</a>
+                <a href="#experience" class="hover:text-sky-400 transition">CV</a>
             </div>
         </div>
     </nav>
@@ -111,64 +113,24 @@
             </div>
             <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">Tech & <span class="gradient-text">Creative</span> Studio</h1>
             <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                Game Developer & Graphics Expert. Specialized in Unity, Unreal Engine 5, 3D Modeling, and Visual Storytelling.
+                Game Developer, 3D Modeler, and Graphics Designer. Turning complex ideas into interactive digital experiences.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#portfolio" class="bg-sky-500 hover:bg-sky-600 px-10 py-4 rounded-xl font-bold transition shadow-lg shadow-sky-500/20">View Portfolio</a>
+                <a href="#game-dev" class="bg-sky-500 hover:bg-sky-600 px-10 py-4 rounded-xl font-bold transition shadow-lg shadow-sky-500/20">View Portfolio</a>
                 <a href="mailto:sheikhumar0077@gmail.com" class="glass-card px-10 py-4 rounded-xl font-bold hover:border-sky-400 transition">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-900/30">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Work Experience</h2>
-            <div class="space-y-8">
-                <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
-                    <p class="text-gray-300">GN Technologies | 12/05/2025 - Present</p>
-                    <ul class="text-gray-400 mt-4 space-y-2 text-sm">
-                        <li>• Led Unity (C#) development of hyper-casual mobile games from prototype to release.</li>
-                        <li>• Integrated ad mediation, Firebase analytics, and monetization features.</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
-                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer Apprentice</h3>
-                    <p class="text-gray-300">Mindstorm Studios | 07/06/2024 - 12/08/2024</p>
-                    <p class="text-gray-400 mt-4 text-sm">Built complete playable game prototypes and collaborated in agile development teams.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
-                    <p class="text-gray-300">R Technologies | 05/05/2022 - 30/09/2022</p>
-                    <p class="text-gray-400 mt-4 text-sm">Designed UI/UX interfaces and promotional video content for brands.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
-                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer Intern</h3>
-                    <p class="text-gray-300">Seven Koncepts | 01/01/2019 - 31/03/2019</p>
-                    <p class="text-gray-400 mt-4 text-sm">Developed branding assets and social media graphics for diverse clients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-24 px-6">
+    <section id="game-dev" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-12 text-center" data-aos="fade-up">Creative <span class="gradient-text">Portfolio</span></h2>
-            
-            <div class="flex flex-wrap justify-center gap-4 mb-16">
-                <button onclick="showTab('game-dev')" class="tab-btn active px-8 py-3 rounded-xl font-bold glass-card transition-all">Game Development</button>
-                <button onclick="showTab('graphic-design')" class="tab-btn px-8 py-3 rounded-xl font-bold glass-card transition-all">Graphic Design</button>
-                <button onclick="showTab('modeling')" class="tab-btn px-8 py-3 rounded-xl font-bold glass-card transition-all">2D & 3D Modeling</button>
-            </div>
-
-            <div id="game-dev" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-4xl font-extrabold section-title" data-aos="fade-right">Game Development</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
                     <img src="https://via.placeholder.com/100/0ea5e9/ffffff?text=MobStrike" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
-                    <h3 class="text-lg font-bold mb-2">Mob Strike: Stickman Running</h3>
-                    <p class="text-gray-400 text-sm mb-6">Unity runner with Firebase & AdMob integration.</p>
+                    <span class="skill-badge uppercase">Google Play</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">Mob Strike: Stickman Running</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Unity/C# runner with Firebase analytics and AdMob mediation.</p>
                     <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play Store →</a>
                 </div>
 
@@ -176,90 +138,111 @@
                     <div class="video-wrapper mb-4">
                         <iframe src="https://www.youtube.com/embed/DVMAJuueO-w"></iframe>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Unfold (PC Game - FYP)</h3>
-                    <p class="text-gray-400 text-sm">Runner-Up award winner. Advanced puzzle and narrative design.</p>
+                    <span class="skill-badge uppercase">PC / Unity</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">Unfold (FYP Winner)</h3>
+                    <p class="text-gray-400 text-sm mb-4">Winner of PGDC Runner-Up award. Advanced puzzle and narrative design.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/100/f43f5e/ffffff?text=SpikyTap" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
+                    <span class="skill-badge uppercase">Google Play</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">Spiky Tap: Survival</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">2D mobile gameplay focused on obstacles and power-ups.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play Store →</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
+                    <div class="video-wrapper mb-4">
+                        <iframe src="https://www.youtube.com/embed/h3e0fmhYWQY"></iframe>
+                    </div>
+                    <span class="skill-badge uppercase">Unreal Engine 5</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">Snowboard Dash 3D</h3>
+                    <p class="text-gray-400 text-sm mb-4">UE5 project focusing on ground alignment physics and landscape sculpting.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-wrapper mb-4">
+                        <iframe src="https://www.youtube.com/embed/fo7lv6VY7h4"></iframe>
+                    </div>
+                    <span class="skill-badge uppercase">VR / Oculus</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">VR Interaction & Shooting</h3>
+                    <p class="text-gray-400 text-sm mb-4">Physics-based VR interactions and box smashing mechanics.</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
                     <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/h3e0fmhYWQY"></iframe>
+                        <iframe src="https://www.youtube.com/embed/VW96puNj20k"></iframe>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Snowboard Dash 3D (UE5)</h3>
-                    <p class="text-gray-400 text-sm">Unreal Engine 5 project focusing on physics and environment design.</p>
+                    <span class="skill-badge uppercase">Android Prototype</span>
+                    <h3 class="text-lg font-bold mt-4 mb-2">Beach Ball Game</h3>
+                    <p class="text-gray-400 text-sm mb-4">Fluid physics-based platformer movement and mobile controls.</p>
                 </div>
             </div>
-
-            <div id="graphic-design" class="tab-content hidden space-y-12">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-sky-400 mb-4">AC Brand</h3>
-                        <div id="ac-gallery" class="grid grid-cols-3 gap-2">
-                            </div>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-sky-400 mb-4">BNB COVER</h3>
-                        <div id="bnb-cover-gallery" class="grid grid-cols-3 gap-2"></div>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-sky-400 mb-4">BNB</h3>
-                        <div id="bnb-gallery" class="grid grid-cols-3 gap-2"></div>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-sky-400 mb-4">LIFT DO</h3>
-                        <div id="lift-do-gallery" class="grid grid-cols-3 gap-2"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modeling" class="tab-content hidden">
-                <h3 class="text-2xl font-bold text-center mb-8">3D Models & Renders</h3>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper" id="modeling-slider-wrapper">
-                        </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next text-sky-400"></div>
-                    <div class="swiper-button-prev text-sky-400"></div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section id="achievements" class="py-24 px-6 bg-slate-900/30">
+    <section id="modelling" class="py-24 bg-slate-900/20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Honours & Awards</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6 text-center">
-                    <i class="fas fa-medal text-4xl text-yellow-500 mb-4"></i>
-                    <h4 class="font-bold">1st Position</h4>
-                    <p class="text-gray-400 text-sm">Game Jam, PGDC (2023)</p>
+            <h2 class="text-4xl font-extrabold section-title" data-aos="fade-right">3D Modelling</h2>
+            <p class="text-gray-400 mb-8 italic">Showcasing high-poly and low-poly assets created in Blender.</p>
+            
+            <div class="swiper modellingSwiper">
+                <div class="swiper-wrapper" id="3d-gallery-wrapper">
+                    </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next text-sky-400"></div>
+                <div class="swiper-button-prev text-sky-400"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="graphics" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold section-title" data-aos="fade-right">Graphic & 2D Design</h2>
+            <p class="text-gray-400 mb-8 italic">Collection of brand covers, advertising materials, and UI assets.</p>
+            
+            <div class="swiper graphicsSwiper">
+                <div class="swiper-wrapper" id="graphics-gallery-wrapper">
+                    </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next text-sky-400"></div>
+                <div class="swiper-button-prev text-sky-400"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-slate-900/30 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Professional Journey</h2>
+            <div class="space-y-8">
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer | GN Technologies</h3>
+                    <p class="text-gray-300">2025 - Present</p>
+                    <p class="text-gray-400 text-sm mt-2">• Led Unity development of hyper-casual games from prototype to full release.</p>
                 </div>
-                <div class="glass-card p-6 text-center">
-                    <i class="fas fa-award text-4xl text-purple-400 mb-4"></i>
-                    <h4 class="font-bold">Runner Up</h4>
-                    <p class="text-gray-400 text-sm">FYP, PGDC (2025)</p>
+
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer | R Technologies</h3>
+                    <p class="text-gray-300">2022</p>
+                    <p class="text-gray-400 text-sm mt-2">• Designed UI/UX interfaces and brand storytelling assets.</p>
                 </div>
-                <div class="glass-card p-6 text-center">
-                    <i class="fas fa-trophy text-4xl text-sky-400 mb-4"></i>
-                    <h4 class="font-bold">High Achiever</h4>
-                    <p class="text-gray-400 text-sm">6th Sem (2nd Position)</p>
-                </div>
-                <div class="glass-card p-6 text-center">
-                    <i class="fas fa-code text-4xl text-green-500 mb-4"></i>
-                    <h4 class="font-bold">1st Position</h4>
-                    <p class="text-gray-400 text-sm">C++ Hackathon (2022)</p>
+
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer Intern | Seven Koncepts</h3>
+                    <p class="text-gray-300">2019</p>
+                    <p class="text-gray-400 text-sm mt-2">• Assisted in visual designs for social media and marketing materials.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center">
-        <div class="mb-6 flex justify-center space-x-6 text-2xl">
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="mb-8 flex justify-center space-x-6 text-2xl">
             <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" class="hover:text-sky-400 transition" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:sheikhumar0077@gmail.com" class="hover:text-sky-400 transition"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-gray-500 text-xs tracking-widest uppercase">Muhammad Umar Sajid</p>
-        <p class="text-gray-600 text-[10px] mt-2">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
+        <p class="text-gray-500 text-xs tracking-widest uppercase mb-2">Muhammad Umar Sajid</p>
+        <p class="text-gray-600 text-[10px]">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -267,72 +250,54 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // TAB SWITCHING LOGIC
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabId).classList.remove('hidden');
-            event.currentTarget.classList.add('active');
-            
-            // Re-init swiper if modeling is shown
-            if(tabId === 'modeling') initSwiper();
-        }
-
-        // 3D MODELING FOLDER DATA
-        // Add as many numbers as you have images in your 3D folder
-        const modelingImages = [1, 2, 3, 4, 5, 6, 7]; 
-        const modelingWrapper = document.getElementById('modeling-slider-wrapper');
-        
-        modelingImages.forEach(num => {
-            const slide = document.createElement('div');
-            slide.className = 'swiper-slide';
-            // Path: folder "3D" / filename "1.png" etc.
-            slide.innerHTML = `<img src="3D/${num}.png" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300?text=3D+Model+${num}'">`;
-            modelingWrapper.appendChild(slide);
-        });
-
-        // GRAPHIC DESIGN BRAND DATA
-        const brands = {
-            'ac': { folder: 'AC', count: 6 },
-            'bnb-cover': { folder: 'BNB COVER', count: 4 },
-            'bnb': { folder: 'BNB', count: 5 },
-            'lift-do': { folder: 'LIFT DO', count: 6 }
+        // CONFIGURATION: Adjust these numbers to match your folder contents
+        const counts = {
+            '3D': 10,        // Total images in 3D folder (1.png, 2.png...)
+            'AC': 5,         // Total in AC folder
+            'BNB_COVER': 5,  // Total in BNB COVER folder
+            'BNB': 5,        // Total in BNB folder
+            'LIFT_DO': 5     // Total in LIFT DO folder
         };
 
-        Object.keys(brands).forEach(brandKey => {
-            const gallery = document.getElementById(`${brandKey}-gallery`);
-            const config = brands[brandKey];
-            for(let i = 1; i <= config.count; i++) {
-                const img = document.createElement('img');
-                img.className = 'w-full aspect-square object-cover rounded-lg border border-white/10 hover:border-sky-400 transition';
-                // Path: folder / filename
-                img.src = `${config.folder}/${i}.png`;
-                img.onerror = function() { this.src = 'https://via.placeholder.com/150?text=Design'; };
-                gallery.appendChild(img);
+        // 3D Slider Injection
+        const wrapper3d = document.getElementById('3d-gallery-wrapper');
+        for(let i = 1; i <= counts['3D']; i++) {
+            wrapper3d.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="3D/${i}.png" alt="3D Model ${i}" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=3D+Asset+${i}'">
+                </div>`;
+        }
+
+        // Graphics Slider Injection (Collectively)
+        const wrapperGraphics = document.getElementById('graphics-gallery-wrapper');
+        const graphicFolders = ['AC', 'BNB COVER', 'BNB', 'LIFT DO'];
+        
+        graphicFolders.forEach(folder => {
+            const configKey = folder.replace(' ', '_');
+            for(let i = 1; i <= (counts[configKey] || 0); i++) {
+                wrapperGraphics.innerHTML += `
+                    <div class="swiper-slide">
+                        <img src="${folder}/${i}.png" alt="Design" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=${folder}+${i}'">
+                    </div>`;
             }
         });
 
-        // SWIPER INITIALIZATION
-        function initSwiper() {
-            new Swiper(".mySwiper", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                pagination: { el: ".swiper-pagination" },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        }
+        // Initialize Swipers
+        new Swiper(".modellingSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+        });
+
+        new Swiper(".graphicsSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+        });
     </script>
 </body>
 </html>
