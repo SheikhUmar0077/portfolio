@@ -9,62 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        
         :root { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #020617; 
-            color: #f1f5f9; 
-        }
-
-        .glass-nav {
-            background: rgba(2, 6, 23, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .glass-card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
-            border-color: #38bdf8;
-            transform: translateY(-8px);
-            background: rgba(30, 41, 59, 0.6);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.75rem;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: 0;
-        }
-
-        .skill-badge {
-            background: rgba(56, 189, 248, 0.1);
-            color: #7dd3fc;
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f1f5f9; }
+        .glass-nav { background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: #38bdf8; transform: translateY(-8px); background: rgba(30, 41, 59, 0.6); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .skill-badge { background: rgba(56, 189, 248, 0.1); color: #7dd3fc; padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2); }
     </style>
 </head>
 <body class="antialiased">
@@ -102,37 +55,31 @@
             <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Work Experience</h2>
             <div class="space-y-8">
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
-                            <p class="text-gray-300">GN Technologies | 2025 - Present</p>
-                        </div>
-                    </div>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Led Unity development of hyper-casual games from prototype to full release.</li>
-                        <li>• Implemented gameplay mechanics, UI systems, and Firebase integrations.</li>
-                        <li>• Optimized performance for low-end Android hardware.</li>
+                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
+                    <p class="text-gray-300">GN Technologies | May 2025 - Present</p>
+                    <ul class="text-gray-400 mt-4 space-y-2 text-sm">
+                        <li>• Led Unity (C#) development of hyper-casual games from prototype to release[cite: 9].</li>
+                        <li>• Implemented gameplay mechanics, UI systems, and performance optimizations[cite: 9].</li>
+                        <li>• Integrated ad mediation, Firebase analytics, and monetization features[cite: 10].</li>
                     </ul>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Game Developer Apprentice</h3>
-                            <p class="text-gray-300">Mindstorm Studios | 2024</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Completed intensive summer apprenticeship focused on game jam style development and rapid prototyping.</p>
+                    <h3 class="text-xl font-bold text-sky-400">Digital Game Developer Apprentice</h3>
+                    <p class="text-gray-300">Mindstorm Studios | June 2024 - Aug 2024</p>
+                    <p class="text-gray-400 mt-4 text-sm">Completed a summer apprenticeship focused on game jam style development and built a complete playable game prototype using Unity (C#)[cite: 14].</p>
                 </div>
 
                 <div class="glass-card p-8 rounded-2xl" data-aos="fade-left">
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
-                            <p class="text-gray-300">R Technologies & Seven Koncepts | 2019 - 2022</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Designed UI/UX interfaces, digital graphics, and promotional assets for brand storytelling.</p>
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
+                    <p class="text-gray-300">R Technologies | May 2022 - Sept 2022</p>
+                    <p class="text-gray-400 mt-4 text-sm">Designed UI/UX interfaces, promotional posts, and digital graphics while editing videos and reels to support brand storytelling[cite: 20, 21].</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
+                    <p class="text-gray-300">Seven Koncepts | Jan 2019 - March 2019</p>
+                    <p class="text-gray-400 mt-4 text-sm">Assisted in creating visual designs for digital marketing and social media branding assets[cite: 26, 27].</p>
                 </div>
             </div>
         </div>
@@ -142,93 +89,48 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Portfolio Gallery</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/100/0ea5e9/ffffff?text=MobStrike" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
+                    <img src="https://via.placeholder.com/100/0ea5e9/ffffff?text=MobStrike" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
                     <span class="skill-badge uppercase">Available on Playstore</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Mob Strike: Stickman Running</h3>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Unity/C# runner with full Firebase analytics, AdMob mediation, and live updates.</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Unity/C# runner with full Firebase analytics, AdMob mediation, and live updates[cite: 56, 57].</p>
                     <a href="https://play.google.com/store/apps/details?id=com.mygames.mobstrike" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play on Android →</a>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/DVMAJuueO-w"></iframe>
-                    </div>
+                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/DVMAJuueO-w"></iframe></div>
                     <span class="skill-badge uppercase">Watch on Youtube</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Unfold (PC Game - FYP)</h3>
-                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Winner of PGDC Runner-Up award. Advanced puzzle mechanics and narrative design.</p>
-                    <div class="text-xs text-yellow-500 font-bold"><i class="fas fa-trophy mr-1"></i> PGDC Runner-Up Award</div>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Advanced puzzle mechanics and narrative design. Runner-Up at PGDC FYP Expo[cite: 60, 61].</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/100/f43f5e/ffffff?text=SpikyTap" alt="Icon" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
+                    <img src="https://via.placeholder.com/100/f43f5e/ffffff?text=SpikyTap" class="w-16 h-16 rounded-xl mb-4 shadow-lg">
                     <span class="skill-badge uppercase">Available on Playstore</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Spiky Tap: Jump to Survive</h3>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">2D mobile gameplay focused on obstacles and power-ups. Published on Google Play Store.</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">2D mobile gameplay focused on obstacles and power-ups published on Play Store[cite: 64, 65].</p>
                     <a href="https://play.google.com/store/apps/details?id=com.labragames.spikytaps" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Play on Android →</a>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/VW96puNj20k"></iframe>
-                    </div>
+                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/VW96puNj20k"></iframe></div>
                     <span class="skill-badge uppercase">Watch on Youtube</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Beach Ball Game</h3>
-                    <p class="text-gray-400 text-sm mb-4">Android platformer prototype featuring fluid physics-based movement and controls.</p>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Android platformer featuring physics-based movement developed using Unity[cite: 67, 68].</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/KKteJMyiZwU"></iframe>
-                    </div>
+                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/KKteJMyiZwU"></iframe></div>
                     <span class="skill-badge uppercase">Watch on Youtube</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Smash Hit VR (Oculus)</h3>
-                    <p class="text-gray-400 text-sm mb-4">Immersive VR recreation developed for the Oculus platform using Unity VR Toolkit.</p>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Immersive VR recreation developed for Oculus platforms[cite: 70].</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <div class="video-wrapper mb-4">
-                        <iframe src="https://www.youtube.com/embed/h3e0fmhYWQY"></iframe>
-                    </div>
+                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/h3e0fmhYWQY"></iframe></div>
                     <span class="skill-badge uppercase">Watch on Youtube</span>
                     <h3 class="text-lg font-bold mt-4 mb-2">Snowboard Dash 3D (UE5)</h3>
-                    <p class="text-gray-400 text-sm mb-4">Unreal Engine 5 project focusing on ground alignment physics and landscape sculpting.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 bg-slate-900/30">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            
-            <div data-aos="fade-right">
-                <h2 class="text-2xl font-bold mb-8">Technical Proficiency</h2>
-                <div class="flex flex-wrap gap-3">
-                    <span class="skill-badge px-4 py-2">Unity (C#)</span>
-                    <span class="skill-badge px-4 py-2">Unreal Engine 5 (C++)</span>
-                    <span class="skill-badge px-4 py-2">Blender 3D</span>
-                    <span class="skill-badge px-4 py-2">Figma (UI/UX)</span>
-                    <span class="skill-badge px-4 py-2">Firebase</span>
-                    <span class="skill-badge px-4 py-2">Mobile Optimization</span>
-                    <span class="skill-badge px-4 py-2">AdMob Mediation</span>
-                    <span class="skill-badge px-4 py-2">Augmented Reality</span>
-                </div>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">Certifications</h2>
-                <ul class="text-gray-400 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-2"></i> Cisco: Introduction to Cybersecurity</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-2"></i> NAVTTC: Graphic Designing Certification</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-left">
-                <h2 class="text-2xl font-bold mb-8">Education</h2>
-                <div class="glass-card p-6 rounded-2xl">
-                    <h4 class="text-sky-400 font-bold">BS in Computer Games Development</h4>
-                    <p class="text-gray-300">Air University, Islamabad</p>
-                    <p class="text-gray-500 text-sm mb-2">2021 - 2025</p>
-                    <div class="text-white font-bold">CGPA: 3.27 / 4.0</div>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Unreal Engine 5 project focusing on physics-based movement and environment design[cite: 75, 76].</p>
                 </div>
             </div>
         </div>
@@ -237,34 +139,22 @@
     <section id="achievements" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Honours & Awards</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in">
                     <i class="fas fa-medal text-4xl text-yellow-500"></i>
-                    <div>
-                        <h4 class="font-bold">1st Position - PGDC Game Jam</h4>
-                        <p class="text-gray-400 text-sm">Air University, 2023</p>
-                    </div>
+                    <div><h4 class="font-bold">1st Position - PGDC Game Jam</h4><p class="text-gray-400 text-sm">Air University, 2023 [cite: 79, 80]</p></div>
                 </div>
                 <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fas fa-trophy text-4xl text-sky-400"></i>
-                    <div>
-                        <h4 class="font-bold">High Achiever - 6th Semester</h4>
-                        <p class="text-gray-400 text-sm">2nd Position in Batch Ranking</p>
-                    </div>
+                    <div><h4 class="font-bold">Runner-Up - FYP Expo</h4><p class="text-gray-400 text-sm">PGDC Air University, 2025 [cite: 83]</p></div>
                 </div>
                 <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fas fa-code text-4xl text-green-500"></i>
-                    <div>
-                        <h4 class="font-bold">1st Position - C++ Hackathon</h4>
-                        <p class="text-gray-400 text-sm">Programming Buddies, 2022</p>
-                    </div>
+                    <div><h4 class="font-bold">1st Position - C++ Hackathon</h4><p class="text-gray-400 text-sm">Programming Buddies, 2022 [cite: 85]</p></div>
                 </div>
                 <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-award text-4xl text-purple-500"></i>
-                    <div>
-                        <h4 class="font-bold">Head of Event - AirTech 25</h4>
-                        <p class="text-gray-400 text-sm">Table Tennis Event Management</p>
-                    </div>
+                    <i class="fas fa-star text-4xl text-purple-500"></i>
+                    <div><h4 class="font-bold">High Achiever of Batch</h4><p class="text-gray-400 text-sm">6th Semester (2nd Position) [cite: 88]</p></div>
                 </div>
             </div>
         </div>
@@ -276,12 +166,10 @@
             <a href="mailto:sheikhumar0077@gmail.com" class="hover:text-sky-400 transition"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="text-gray-500 text-xs tracking-widest uppercase mb-2">Muhammad Umar Sajid</p>
-        <p class="text-gray-600 text-[10px]">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
+        <p class="text-gray-600 text-[10px]">Westridge 3, Rawalpindi | Founder of Unstack Studios [cite: 4, 98]</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
