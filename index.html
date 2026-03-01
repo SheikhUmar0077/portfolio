@@ -1,199 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Umar Sajid | Game Developer & Creative Studio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        
-        :root { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #020617; 
-            color: #f1f5f9; 
-        }
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-        .glass-nav {
-            background: rgba(2, 6, 23, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .glass-card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
-            border-color: #38bdf8;
-            transform: translateY(-8px);
-            background: rgba(30, 41, 59, 0.6);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.75rem;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: 0;
-        }
-
-        .skill-badge {
-            background: rgba(56, 189, 248, 0.1);
-            color: #7dd3fc;
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
-            margin: 4rem 0;
-        }
-    </style>
-</head>
-<body class="antialiased">
-
-<body class="antialiased overflow-x-hidden">
-
-<nav class="fixed w-full z-50 glass-nav py-4">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
-        <span class="text-lg md:text-xl font-extrabold tracking-tighter gradient-text truncate mr-4">
-            M. UMAR SAJID
-        </span>
-        
-        <div class="hidden xl:flex space-x-8 text-[10px] font-semibold uppercase tracking-widest">
-            </div>
-
-        <button id="menu-btn" class="xl:hidden text-white focus:outline-none flex-shrink-0 p-2">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
-
-    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-white/10 w-full px-6 py-4 space-y-4 text-xs font-semibold uppercase tracking-widest">
-        <a href="#home" class="block hover:text-sky-400 transition">Home</a>
-        <a href="#experience" class="block hover:text-sky-400 transition">Experience</a>
-        <a href="#game-dev" class="block hover:text-sky-400 transition">Game Dev</a>
-        <a href="#modelling" class="block hover:text-sky-400 transition">3D Modelling</a>
-        <a href="#sketches" class="block hover:text-sky-400 transition">Sketches</a>
-        <a href="#graphic-design" class="block hover:text-sky-400 transition">Graphics</a>
-        <a href="#skills" class="block hover:text-sky-400 transition">Skills</a>
-        <a href="#achievements" class="block hover:text-sky-400 transition">Awards</a>
-    </div>
-</nav>
-<script>
-    // Mobile Menu Toggle Logic
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-
-    // Initialize AOS
-    AOS.init({ duration: 1000, once: true });
-</script>
-   <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div class="max-w-4xl text-center" data-aos="zoom-out">
-            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/20">
-                Founder, Unstack Studios
-            </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tight">Digital Game <span class="gradient-text">Developer</span></h1>
-            <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                Crafting immersive worlds and high-performance mobile games. Specialized in Unity, Unreal Engine 5, and UI/UX design.
-            </p>
-           
-        </div>
-    </section>
-
-   <section id="experience" class="py-24 bg-slate-900/30">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Work Experience</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <div class="glass-card p-8 rounded-2xl h-full" data-aos="fade-up">
-                    <div class="flex flex-col mb-4">
-                        <h3 class="text-xl font-bold text-sky-400">Digital Game Developer</h3>
-                        <p class="text-gray-300">GN Technologies | 12/05/2025 - Present</p>
-                    </div>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Led Unity (C#) development of hyper-casual mobile games from prototype to release.</li>
-                        <li>• Implemented gameplay mechanics, UI systems, and performance optimizations.</li>
-                        <li>• Integrated ad mediation, Firebase analytics, and monetization features.</li>
-                        <li>• Optimized games for low-end Android devices and production stability.</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex flex-col mb-4">
-                        <h3 class="text-xl font-bold text-sky-400">Digital Game Developer Apprentice</h3>
-                        <p class="text-gray-300">Mindstorm Studios | 07/06/2024 - 12/08/2024</p>
-                    </div>
-                    <p class="text-gray-400 text-sm mb-2 font-semibold">Completed intensive summer apprenticeship focused on rapid prototyping.</p>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Built a complete playable game prototype using Unity (C#).</li>
-                        <li>• Implemented gameplay mechanics and collaborated in a small development team.</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl h-full" data-aos="fade-up">
-                    <div class="flex flex-col mb-4">
-                        <h3 class="text-xl font-bold text-sky-400">Graphics Designer</h3>
-                        <p class="text-gray-300">R Technologies | 05/05/2022 - 30/09/2022</p>
-                    </div>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Designed UI/UX interfaces, promotional posts, and various digital graphics.</li>
-                        <li>• Edited videos and reels to support brand storytelling and marketing goals.</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl h-full" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex flex-col mb-4">
-                        <h3 class="text-xl font-bold text-sky-400">Graphics Designer Intern</h3>
-                        <p class="text-gray-300">Seven Koncepts | 01/01/2019 - 31/03/2019</p>
-                    </div>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li>• Assisted in creating visual designs for digital and marketing materials.</li>
-                        <li>• Designed social media graphics and branding assets.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-  <section id="game-dev" class="py-24 px-6">
+<section id="game-dev" class="py-24 px-6">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold mb-4 text-center">Game Development <span class="gradient-text">& VR</span></h2>
         <p class="text-center text-gray-400 mb-16">High-performance mobile games and immersive virtual reality experiences.</p>
@@ -202,7 +7,7 @@ html, body {
             
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
                 <div class="w-full h-48 overflow-hidden">
-                    <img src="ICONS/1.jpg" alt="Mob Strike Banner" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.src='https://via.placeholder.com/600x300?text=Mob+Strike'">
+                    <img src="ICONS/1.jpg" alt="Mob Strike" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.src='https://via.placeholder.com/600x300?text=Mob+Strike'">
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">Google Play Store</span>
@@ -214,7 +19,7 @@ html, body {
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-full h-48 overflow-hidden">
-                    <img src="ICONS/2.png" alt="Spiky Tap Banner" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.src='https://via.placeholder.com/600x300?text=Spiky+Tap'">
+                    <img src="ICONS/2.png" alt="Spiky Tap" class="w-full h-full object-cover transition duration-500 hover:scale-110" onerror="this.src='https://via.placeholder.com/600x300?text=Spiky+Tap'">
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">Google Play Store</span>
@@ -224,316 +29,134 @@ html, body {
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/BVdHc_hqXdw/hqdefault.jpg" alt="Unfold" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/BVdHc_hqXdw?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/BVdHc_hqXdw/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <span class="skill-badge uppercase">Gameplay Showcase</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Unfold</h3>
-                    <p class="text-gray-400 text-sm mb-6">Creative puzzle mechanics developed in Unity.</p>
-                    <a href="https://www.youtube.com/watch?v=BVdHc_hqXdw" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <span class="skill-badge uppercase">Gameplay</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Unfold Gameplay</h3>
+                    <p class="text-gray-400 text-sm">Interactive puzzle mechanics showcase.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/WqdO-uKFL2I/hqdefault.jpg" alt="Jet Set Fly" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/WqdO-uKFL2I?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/WqdO-uKFL2I/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">Action</span>
                     <h3 class="text-xl font-bold mt-4 mb-2">Jet Set Fly</h3>
-                    <p class="text-gray-400 text-sm mb-6">High-speed flight mechanics and environment design.</p>
-                    <a href="https://www.youtube.com/watch?v=WqdO-uKFL2I" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <p class="text-gray-400 text-sm">High-speed flight environment and controls.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/TGVRaE4mf3Y/hqdefault.jpg" alt="Slither Clone" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/TGVRaE4mf3Y?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/TGVRaE4mf3Y/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <span class="skill-badge uppercase">Multiplayer Tech</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Slither.io Remake</h3>
-                    <p class="text-gray-400 text-sm mb-6">Physics-based tail movement and smooth controls.</p>
-                    <a href="https://www.youtube.com/watch?v=TGVRaE4mf3Y" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <span class="skill-badge uppercase">Mechanics</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Slither Remake</h3>
+                    <p class="text-gray-400 text-sm">Snake physics and multiplayer movement simulation.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/oaMj7IDYKVo/hqdefault.jpg" alt="Paint Duel" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/oaMj7IDYKVo?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/oaMj7IDYKVo/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">Casual</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Paint Duel Game</h3>
-                    <p class="text-gray-400 text-sm mb-6">Mechanics focused on dynamic texture painting in 3D.</p>
-                    <a href="https://www.youtube.com/watch?v=oaMj7IDYKVo" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Paint Duel</h3>
+                    <p class="text-gray-400 text-sm">Dynamic painting mechanics in a 3D arena.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/VW96puNj20k/hqdefault.jpg" alt="Beach Ball" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/VW96puNj20k?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/VW96puNj20k/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">Physics</span>
                     <h3 class="text-xl font-bold mt-4 mb-2">Beach Ball Game</h3>
-                    <p class="text-gray-400 text-sm mb-6">Summer-themed physics simulation and level design.</p>
-                    <a href="https://www.youtube.com/watch?v=VW96puNj20k" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <p class="text-gray-400 text-sm">Summer-themed physics interaction.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/KKteJMyiZwU/hqdefault.jpg" alt="Smash Hit VR" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/KKteJMyiZwU?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/KKteJMyiZwU/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <span class="skill-badge uppercase">Virtual Reality (Oculus)</span>
+                    <span class="skill-badge uppercase">Oculus VR</span>
                     <h3 class="text-xl font-bold mt-4 mb-2">Smash Hit VR</h3>
-                    <p class="text-gray-400 text-sm mb-6">Immersive VR environment with glass-shattering physics.</p>
-                    <a href="https://www.youtube.com/watch?v=KKteJMyiZwU" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch VR Demo →</a>
+                    <p class="text-gray-400 text-sm">Immersive virtual reality glass destruction.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/h3e0fmhYWQY/hqdefault.jpg" alt="Snowboard Dash" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/h3e0fmhYWQY?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/h3e0fmhYWQY/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <span class="skill-badge uppercase">Sports 3D</span>
+                    <span class="skill-badge uppercase">3D Sports</span>
                     <h3 class="text-xl font-bold mt-4 mb-2">Snowboard Dash 3D</h3>
-                    <p class="text-gray-400 text-sm mb-6">Fast-paced 3D snowboarding with trick mechanics.</p>
-                    <a href="https://www.youtube.com/watch?v=h3e0fmhYWQY" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch Gameplay →</a>
+                    <p class="text-gray-400 text-sm">Fast-paced snowboarding downhill runner.</p>
                 </div>
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                <div class="w-full h-48 overflow-hidden">
-                    <img src="https://img.youtube.com/vi/Ec3CnyFc3hM/hqdefault.jpg" alt="Shooting VR" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="relative w-full h-48 cursor-pointer group" onclick="this.innerHTML='<iframe class=\'w-full h-full\' src=\'https://www.youtube.com/embed/Ec3CnyFc3hM?autoplay=1\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <img src="https://img.youtube.com/vi/Ec3CnyFc3hM/hqdefault.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6">
                     <span class="skill-badge uppercase">VR Experience</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Shooting & Box Smashing</h3>
-                    <p class="text-gray-400 text-sm mb-6">Hand-tracking and controller haptics integration in VR.</p>
-                    <a href="https://www.youtube.com/watch?v=Ec3CnyFc3hM" target="_blank" class="text-sky-400 text-sm font-bold hover:underline">Watch VR Demo →</a>
+                    <h3 class="text-xl font-bold mt-4 mb-2">VR Shooting Range</h3>
+                    <p class="text-gray-400 text-sm">Box smashing and shooting mechanics in VR.</p>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-
-    <div class="section-divider"></div>
-
-    <section id="modelling" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-16 text-center">3D Modelling <span class="gradient-text">& Cinematography</span></h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-                    <img src="3D/1.png" alt="3D Model 1" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/500x400?text=3D+Model+1'">
-                    <div class="p-4 text-center font-bold">3D Sword - Blender</div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img src="3D/2.png" alt="3D Model 2" class="w-full h-64 object-cover" onerror="this.src='https://via.placeholder.com/500x400?text=3D+Model+2'">
-                    <div class="p-4 text-center font-bold">3D Sci-Fi Drone - Blender</div>
-                </div>
-
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/XJvIQAfnWls"></iframe></div>
-                    <h3 class="text-md font-bold">Game Trailer - Blender</h3>
-                </div>
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/6DYv-1lfUcg"></iframe></div>
-                    <h3 class="text-md font-bold">Unfold FYP Starting Cinematic - Unity</h3>
-                </div>
-                <div class="glass-card p-6 rounded-2xl" data-aos="fade-up">
-                    <div class="video-wrapper mb-4"><iframe src="https://www.youtube.com/embed/lwk6FNjxYCk"></iframe></div>
-                    <h3 class="text-md font-bold">Unfold FYP Teaser - Unity</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-<div class="section-divider"></div>
-
-    <section id="sketches" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-4 text-center">Hand-Drawn <span class="gradient-text">Sketches</span></h2>
-            <p class="text-center text-gray-400 mb-16">Concept art and traditional character studies.</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="zoom-in">
-                    <img src="SKETCHES/1.jpg" alt="Sketch 1" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/400x600?text=Sketch+1'">
-                    <div class="p-4 bg-slate-900/60 backdrop-blur-md text-center text-sm font-semibold border-t border-white/5">Racing Car Sketch</div>
-                </div>
-
-                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="SKETCHES/2.jpg" alt="Sketch 2" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/400x600?text=Sketch+2'">
-                    <div class="p-4 bg-slate-900/60 backdrop-blur-md text-center text-sm font-semibold border-t border-white/5">Lion Sketch</div>
-                </div>
-
-                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="SKETCHES/3.jpg" alt="Sketch 3" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/400x600?text=Sketch+3'">
-                    <div class="p-4 bg-slate-900/60 backdrop-blur-md text-center text-sm font-semibold border-t border-white/5">Eye Sketch</div>
-                </div>
-
-                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="SKETCHES/4.jpg" alt="Sketch 4" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/400x600?text=Sketch+4'">
-                    <div class="p-4 bg-slate-900/60 backdrop-blur-md text-center text-sm font-semibold border-t border-white/5">Roaring Lion Sketch</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-     <section id="graphic-design" class="py-24 px-6 bg-slate-900/20">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-16 text-center">Graphic <span class="gradient-text">Design Portfolio</span></h2>
-            
-            <div class="mb-20">
-                <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-palette mr-3 text-sky-400"></i> Brandings & Posts</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                    <script>
-                        for(let i=1; i<=28; i++) {
-                            document.write(`
-                                <div class="glass-card aspect-square rounded-lg overflow-hidden group">
-                                    <img src="2D/${i}.png" alt="2D Asset ${i}" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/300?text=2D+Asset+${i}'">
-                                </div>
-                            `);
-                        }
-                    </script>
-                </div>
-            </div>
-
-            <div class="mb-20">
-                <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-image mr-3 text-sky-400"></i> Covers & Banners</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <script>
-                        for(let i=1; i<=22; i++) {
-                            document.write(`
-                                <div class="glass-card aspect-[21/9] rounded-xl overflow-hidden group">
-                                    <img src="2D COVERS/${i}.png" alt="Cover ${i}" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/600x250?text=Cover+Banner+${i}'">
-                                </div>
-                            `);
-                        }
-                    </script>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-video mr-3 text-sky-400"></i> Motion Graphics (MP4)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <script>
-                        for(let i=1; i<=5; i++) {
-                            document.write(`
-                                <div class="glass-card p-2 rounded-2xl overflow-hidden">
-                                    <video controls class="w-full rounded-xl">
-                                        <source src="MP4/${i}.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <p class="text-center text-xs mt-2 text-gray-500 uppercase font-bold tracking-widest">Motion Work ${i}</p>
-                                </div>
-                            `);
-                        }
-                    </script>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <div class="section-divider"></div>
-
-<section id="skills" class="py-24 bg-slate-900/30">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            
-            <div data-aos="fade-right">
-                <h2 class="text-2xl font-bold mb-8">Technical Proficiency</h2>
-                <div class="flex flex-wrap gap-3">
-                    <span class="skill-badge px-4 py-2">Unity (C#)</span>
-                    <span class="skill-badge px-4 py-2">Unreal Engine</span>
-                    <span class="skill-badge px-4 py-2">C++</span>
-                    <span class="skill-badge px-4 py-2">Blender 3D</span>
-                    <span class="skill-badge px-4 py-2">Figma (UI/UX)</span>
-                    <span class="skill-badge px-4 py-2">Firebase</span>
-                    <span class="skill-badge px-4 py-2">Mobile Optimization</span>
-                    <span class="skill-badge px-4 py-2">AdMob</span>
-                    <span class="skill-badge px-4 py-2">VR/AR</span>
-                </div>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">Certifications</h2>
-                <ul class="text-gray-400 space-y-2">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-2"></i> Cisco: Introduction to Cybersecurity</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-2"></i> NAVTTC: Graphic Designing Certification</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-left">
-                <h2 class="text-2xl font-bold mb-8">Education</h2>
-                <div class="glass-card p-6 rounded-2xl">
-                    <h4 class="text-sky-400 font-bold">BS in Computer Games Development</h4>
-                    <p class="text-gray-300">Air University, Islamabad</p>
-                    <p class="text-gray-500 text-sm mb-2">2021 - 2025</p>
-                    <div class="text-white font-bold">CGPA: 3.27 / 4.0</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Honours & Awards</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in">
-                    <i class="fas fa-medal text-4xl text-yellow-500"></i>
-                    <div>
-                        <h4 class="font-bold">1st Position - Game Jam</h4>
-                        <p class="text-gray-400 text-sm">PGDC, Air University (2023)</p>
-                    </div>
-                </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-award text-4xl text-purple-400"></i>
-                    <div>
-                        <h4 class="font-bold">Runner Up - FYP</h4>
-                        <p class="text-gray-400 text-sm">PGDC, Air University (2025)</p>
-                    </div>
-                </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-trophy text-4xl text-sky-400"></i>
-                    <div>
-                        <h4 class="font-bold">High Achiever - 6th Semester</h4>
-                        <p class="text-gray-400 text-sm">2nd Position in Batch</p>
-                    </div>
-                </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-code text-4xl text-green-500"></i>
-                    <div>
-                        <h4 class="font-bold">1st Position - C++ Hackathon</h4>
-                        <p class="text-gray-400 text-sm">Programming Buddies (2022)</p>
-                    </div>
-                </div>
-                <div class="glass-card p-6 flex items-center space-x-4" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-users text-4xl text-blue-500"></i>
-                    <div>
-                        <h4 class="font-bold">Head of Table Tennis</h4>
-                        <p class="text-gray-400 text-sm">AirTech 25</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="mb-8 flex justify-center space-x-6 text-2xl">
-            <a href="https://www.linkedin.com/in/muhammad-umar-sajid-025523276/" class="hover:text-sky-400 transition" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:sheikhumar0077@gmail.com" class="hover:text-sky-400 transition"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-gray-500 text-xs tracking-widest uppercase mb-2">Muhammad Umar Sajid</p>
-        <p class="text-gray-600 text-[10px]">Westridge 3, Rawalpindi | Tech & Creative Studio</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
-</body>
-</html>
